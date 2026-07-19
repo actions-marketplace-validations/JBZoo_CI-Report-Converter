@@ -18,10 +18,10 @@ namespace JBZoo\CIReportConverter\Converters;
 
 final class Map
 {
-    public const INPUT  = 'input';
-    public const OUTPUT = 'output';
+    public const string INPUT  = 'input';
+    public const string OUTPUT = 'output';
 
-    public const MAP_TESTS = [
+    public const array MAP_TESTS = [
         JUnitConverter::class               => [self::INPUT => true, self::OUTPUT => true],
         TeamCityTestsConverter::class       => [self::INPUT => false, self::OUTPUT => true],
         PhpMdJsonConverter::class           => [self::INPUT => true, self::OUTPUT => false],
@@ -35,7 +35,7 @@ final class Map
         PlainTextConverter::class           => [self::INPUT => false, self::OUTPUT => true],
     ];
 
-    public const MAP_METRICS = [
+    public const array MAP_METRICS = [
         PhpLocStatsTcConverter::class,
         PhpDependStatsTcConverter::class,
         PhpMetricsStatsTcConverter::class,

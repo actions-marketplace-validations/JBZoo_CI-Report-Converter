@@ -18,7 +18,7 @@ namespace JBZoo\CIReportConverter\Formats\GithubActions;
 
 final class GithubActions
 {
-    public const DEFAULT_NAME = 'Undefined Suite Name';
+    public const string DEFAULT_NAME = 'Undefined Suite Name';
 
     /** @var GithubCase[] */
     private array $testCases = [];

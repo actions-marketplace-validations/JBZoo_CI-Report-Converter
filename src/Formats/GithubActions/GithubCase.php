@@ -20,12 +20,12 @@ use JBZoo\CIReportConverter\Formats\AbstractNode;
 
 final class GithubCase extends AbstractNode
 {
-    public const LEVEL_ERROR   = 'error';
-    public const LEVEL_WARNING = 'warning';
-    public const LEVEL_DEBUG   = 'debug';
+    public const string LEVEL_ERROR   = 'error';
+    public const string LEVEL_WARNING = 'warning';
+    public const string LEVEL_DEBUG   = 'debug';
 
-    public const DEFAULT_LEVEL   = self::LEVEL_ERROR;
-    public const DEFAULT_MESSAGE = 'Undefined Error Message';
+    public const string DEFAULT_LEVEL   = self::LEVEL_ERROR;
+    public const string DEFAULT_MESSAGE = 'Undefined Error Message';
 
     public string  $level;
     public ?int    $line    = null;

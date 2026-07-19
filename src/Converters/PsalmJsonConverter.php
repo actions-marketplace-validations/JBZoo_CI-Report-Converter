@@ -26,8 +26,8 @@ use function JBZoo\Data\json;
 
 final class PsalmJsonConverter extends AbstractConverter
 {
-    public const TYPE = 'psalm-json';
-    public const NAME = 'Psalm.json';
+    public const string TYPE = 'psalm-json';
+    public const string NAME = 'Psalm.json';
 
     public function toInternal(string $source): SourceSuite
     {

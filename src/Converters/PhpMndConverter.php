@@ -26,8 +26,8 @@ use function JBZoo\Data\data;
 
 final class PhpMndConverter extends AbstractConverter
 {
-    public const TYPE = 'phpmnd';
-    public const NAME = 'PHPmnd.xml';
+    public const string TYPE = 'phpmnd';
+    public const string NAME = 'PHPmnd.xml';
 
     public function toInternal(string $source): SourceSuite
     {

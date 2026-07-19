@@ -41,22 +41,22 @@
     "prefer-stable"     : true,
 
     "require"           : {
-        "php"             : "^8.2",
+        "php"             : "^8.3",
         "ext-dom"         : "*",
         "ext-simplexml"   : "*",
         "ext-hash"        : "*",
 
-        "jbzoo/data"      : "^7.2",
-        "jbzoo/utils"     : "^7.3",
-        "jbzoo/cli"       : "^7.2.4",
-        "jbzoo/markdown"  : "^7.0.1",
+        "jbzoo/data"      : "^8.0",
+        "jbzoo/utils"     : "^8.0",
+        "jbzoo/cli"       : "^8.0",
+        "jbzoo/markdown"  : "^8.0",
 
         "symfony/console" : ">=7.3.4"
     },
 
     "require-dev"       : {
-        "jbzoo/toolbox-dev"         : "^7.3",
-        "jbzoo/mermaid-php"         : "^7.2.4",
+        "jbzoo/toolbox-dev"         : "^8.0",
+        "jbzoo/mermaid-php"         : "^8.0",
         "roave/security-advisories" : "dev-master"
     },
 
@@ -78,7 +78,7 @@
 
     "extra"             : {
         "branch-alias" : {
-            "dev-master" : "7.x-dev"
+            "dev-master" : "8.x-dev"
         }
     }
 }

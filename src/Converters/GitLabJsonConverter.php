@@ -26,8 +26,8 @@ use JBZoo\CIReportConverter\Formats\Source\SourceSuite;
  */
 final class GitLabJsonConverter extends AbstractConverter
 {
-    public const TYPE = 'gitlab-json';
-    public const NAME = 'GitLab - JSON';
+    public const string TYPE = 'gitlab-json';
+    public const string NAME = 'GitLab - JSON';
 
     public function fromInternal(SourceSuite $sourceSuite): string
     {

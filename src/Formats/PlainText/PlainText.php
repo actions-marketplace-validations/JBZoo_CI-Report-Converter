@@ -18,7 +18,7 @@ namespace JBZoo\CIReportConverter\Formats\PlainText;
 
 final class PlainText
 {
-    public const DEFAULT_NAME = 'Undefined Suite Name';
+    public const string DEFAULT_NAME = 'Undefined Suite Name';
 
     /** @var PlainTextCase[] */
     private array $testCases = [];

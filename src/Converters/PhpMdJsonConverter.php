@@ -26,8 +26,8 @@ use function JBZoo\Data\json;
 
 final class PhpMdJsonConverter extends AbstractConverter
 {
-    public const TYPE = 'phpmd-json';
-    public const NAME = 'PHPmd.json';
+    public const string TYPE = 'phpmd-json';
+    public const string NAME = 'PHPmd.json';
 
     public function toInternal(string $source): SourceSuite
     {

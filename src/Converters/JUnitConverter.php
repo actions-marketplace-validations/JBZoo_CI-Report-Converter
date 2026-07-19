@@ -26,8 +26,8 @@ use function JBZoo\Data\data;
 
 final class JUnitConverter extends AbstractConverter
 {
-    public const TYPE = 'junit';
-    public const NAME = 'JUnit.xml';
+    public const string TYPE = 'junit';
+    public const string NAME = 'JUnit.xml';
 
     public function toInternal(string $source): SourceSuite
     {
@@ -90,7 +90,7 @@ final class JUnitConverter extends AbstractConverter
 
                 if ($sourceCase->stdOut !== null && $sourceCase->errOut !== null) {
                     $junitCase->addSystemOut("{$sourceCase->stdOut}\n{$sourceCase->errOut}");
-                } elseif ($sourceCase->stdOut !== null && $sourceCase->errOut === null) {
+                } elseif ($sourceCase->stdOut !== null) {
                     $junitCase->addSystemOut($sourceCase->stdOut);
                 } elseif ($sourceCase->errOut !== null) {
                     $junitCase->addSystemOut($sourceCase->errOut);

@@ -20,12 +20,12 @@ use JBZoo\CIReportConverter\Formats\AbstractNode;
 
 final class PlainTextCase extends AbstractNode
 {
-    public const LEVEL_ERROR   = 'Error';
-    public const LEVEL_WARNING = 'Warning';
-    public const LEVEL_DEBUG   = 'Debug';
+    public const string LEVEL_ERROR   = 'Error';
+    public const string LEVEL_WARNING = 'Warning';
+    public const string LEVEL_DEBUG   = 'Debug';
 
-    public const DEFAULT_LEVEL   = self::LEVEL_ERROR;
-    public const DEFAULT_MESSAGE = 'Undefined Error Message';
+    public const string DEFAULT_LEVEL   = self::LEVEL_ERROR;
+    public const string DEFAULT_MESSAGE = 'Undefined Error Message';
 
     // `$this->name` is relative path to file
     public ?int    $line    = null;

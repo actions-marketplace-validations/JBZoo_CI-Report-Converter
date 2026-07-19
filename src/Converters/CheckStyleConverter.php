@@ -26,8 +26,8 @@ use function JBZoo\Data\data;
 
 final class CheckStyleConverter extends AbstractConverter
 {
-    public const TYPE = 'checkstyle';
-    public const NAME = 'CheckStyle.xml';
+    public const string TYPE = 'checkstyle';
+    public const string NAME = 'CheckStyle.xml';
 
     public function toInternal(string $source): SourceSuite
     {

@@ -18,8 +18,8 @@ namespace JBZoo\CIReportConverter\Formats;
 
 final class Xml
 {
-    public const VERSION  = '1.0';
-    public const ENCODING = 'UTF-8';
+    public const string VERSION  = '1.0';
+    public const string ENCODING = 'UTF-8';
 
     public static function createDomDocument(?string $source = null): \DOMDocument
     {

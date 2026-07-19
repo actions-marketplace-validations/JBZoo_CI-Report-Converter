@@ -24,8 +24,8 @@ use function JBZoo\Data\data;
 
 final class PhpMetricsStatsTcConverter extends AbstractStatsTcConverter
 {
-    public const TYPE = 'phpmetrics-xml';
-    public const NAME = 'PHP Metrics (xml)';
+    public const string TYPE = 'phpmetrics-xml';
+    public const string NAME = 'PHP Metrics (xml)';
 
     public function toInternalMetric(string $sourceCode): Metrics
     {

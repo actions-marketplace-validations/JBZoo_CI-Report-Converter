@@ -29,6 +29,7 @@ use JBZoo\CIReportConverter\Converters\TeamCityTestsConverter;
 use JBZoo\Cli\CliApplication;
 use JBZoo\Utils\Cli;
 use JBZoo\Utils\Sys;
+use PHPUnit\Framework\Attributes\Depends;
 use Symfony\Component\Console\Input\StringInput;
 use Symfony\Component\Console\Output\BufferedOutput;
 
@@ -138,9 +139,7 @@ class CliCommandsTest extends PHPUnit
         isSame($expectedRunsArgs, $actionYml->findArray('runs.args'), $errorMessage);
     }
 
-    /**
-     * @depends testGitHubActionsYml
-     */
+    #[Depends('testGitHubActionsYml')]
     public function testGitHubActionsReadMe(): void
     {
         $inputs   = yml(PROJECT_ROOT . '/action.yml')->findArray('inputs');
@@ -251,9 +250,7 @@ class CliCommandsTest extends PHPUnit
         );
     }
 
-    /**
-     * @depends testConvertToTcInspections
-     */
+    #[Depends('testConvertToTcInspections')]
     public function testNonZeroCode(): void
     {
         $output = null;
@@ -370,9 +367,8 @@ class CliCommandsTest extends PHPUnit
     public function task(string $action, array $params = []): string
     {
         $application = new CliApplication();
-        $application->add(new Convert());
-        $application->add(new ConvertMap());
-        $application->add(new TeamCityStats());
+        // Symfony Console 8.0 removed Application::add(); addCommands() exists on 7.3+/8.x.
+        $application->addCommands([new Convert(), new ConvertMap(), new TeamCityStats()]);
         $command = $application->find($action);
 
         $buffer   = new BufferedOutput();
@@ -392,7 +388,12 @@ class CliCommandsTest extends PHPUnit
 
         return Cli::exec(
             \implode(' ', [
-                Sys::getBinary(),
+                // -d error_reporting mutes E_DEPRECATED in the child process: the --prefer-lowest CI
+                // leg resolves old transitive dev-tool deps (amphp/*, sabre/event via php-coveralls)
+                // whose files-autoload emits "implicitly nullable" deprecations on PHP 8.5+, which the
+                // 2>&1 below would fold into the captured report/help output. Production (the phar or a
+                // no-dev install) never loads those packages, so this only affects the test harness.
+                Sys::getBinary() . ' -d error_reporting=' . (\E_ALL & ~\E_DEPRECATED),
                 "{$rootDir}/ci-report-converter.php --no-ansi",
                 $action,
                 '2>&1',

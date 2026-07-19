@@ -99,7 +99,7 @@
         }
     },
     {
-        "description": "JBZoo\\PHPUnit\\ExampleTest::testCompareArrays\nFailed asserting that two arrays are identical.\n--- Expected\n+++ Actual\n@@ @@\n-Array \u00260 ()\n+Array \u00260 (\n+    0 => 1\n+)\n\nvendor\/jbzoo\/phpunit\/src\/functions\/aliases.php:197\ntests\/ExampleTest.php:98",
+        "description": "JBZoo\\PHPUnit\\ExampleTest::testCompareArrays\nFailed asserting that two arrays are identical.\n--- Expected\n+++ Actual\n@@ @@\n-Array &0 ()\n+Array &0 (\n+    0 => 1\n+)\n\nvendor\/jbzoo\/phpunit\/src\/functions\/aliases.php:197\ntests\/ExampleTest.php:98",
         "fingerprint": "99e7a14a661a2e2e22411efef926f91a3fd9415413b5fb1dbf6a8c14c18f76fa",
         "severity": "blocker",
         "location": {

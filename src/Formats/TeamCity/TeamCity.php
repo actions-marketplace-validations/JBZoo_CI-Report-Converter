@@ -21,15 +21,15 @@ use JBZoo\Utils\Sys;
 
 final class TeamCity
 {
-    public const SEVERITY_INFO         = 'INFO';
-    public const SEVERITY_WARNING_WEAK = 'WEAK WARNING';
-    public const SEVERITY_WARNING      = 'WARNING';
-    public const SEVERITY_ERROR        = 'ERROR';
+    public const string SEVERITY_INFO         = 'INFO';
+    public const string SEVERITY_WARNING_WEAK = 'WEAK WARNING';
+    public const string SEVERITY_WARNING      = 'WARNING';
+    public const string SEVERITY_ERROR        = 'ERROR';
 
-    public const DEFAULT_INSPECTION_ID       = 'CodingStandardIssues';
-    public const DEFAULT_INSPECTION_NAME     = 'Coding Standard Issues';
-    public const DEFAULT_INSPECTION_CATEGORY = 'Coding Standard';
-    public const DEFAULT_INSPECTION_DESC     = 'Issues found while checking coding standards';
+    public const string DEFAULT_INSPECTION_ID       = 'CodingStandardIssues';
+    public const string DEFAULT_INSPECTION_NAME     = 'Coding Standard Issues';
+    public const string DEFAULT_INSPECTION_CATEGORY = 'Coding Standard';
+    public const string DEFAULT_INSPECTION_DESC     = 'Issues found while checking coding standards';
 
     private int $flowId;
 

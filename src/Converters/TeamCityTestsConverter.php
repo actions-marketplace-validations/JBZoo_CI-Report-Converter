@@ -24,8 +24,8 @@ use JBZoo\CIReportConverter\Formats\TeamCity\Writers\Buffer;
 
 final class TeamCityTestsConverter extends AbstractConverter
 {
-    public const TYPE = 'tc-tests';
-    public const NAME = 'TeamCity - Tests';
+    public const string TYPE = 'tc-tests';
+    public const string NAME = 'TeamCity - Tests';
 
     private TeamCity $tcLogger;
 
@@ -81,7 +81,6 @@ final class TeamCityTestsConverter extends AbstractConverter
 
     /**
      * @SuppressWarnings(PHPMD.NPathComplexity)
-     * @suppress PhanPossiblyUndeclaredProperty
      */
     private function renderTestCase(SourceCase $case): void
     {
