@@ -24,8 +24,8 @@ use function JBZoo\Utils\float;
 
 final class PhpUnitCloverStatsTcConverter extends AbstractStatsTcConverter
 {
-    public const TYPE = 'phpunit-clover-xml';
-    public const NAME = 'PHPUnit Clover (xml)';
+    public const string TYPE = 'phpunit-clover-xml';
+    public const string NAME = 'PHPUnit Clover (xml)';
 
     /**
      * @SuppressWarnings(PHPMD.NPathComplexity)

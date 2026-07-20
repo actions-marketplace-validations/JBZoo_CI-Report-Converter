@@ -24,8 +24,8 @@ use function JBZoo\Data\data;
 
 final class PhpDependStatsTcConverter extends AbstractStatsTcConverter
 {
-    public const TYPE = 'pdepend-xml';
-    public const NAME = 'PHP Depend (xml)';
+    public const string TYPE = 'pdepend-xml';
+    public const string NAME = 'PHP Depend (xml)';
 
     public function toInternalMetric(string $sourceCode): Metrics
     {

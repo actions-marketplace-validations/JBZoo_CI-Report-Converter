@@ -24,8 +24,8 @@ use JBZoo\CIReportConverter\Formats\TeamCity\Writers\Buffer;
 
 final class TeamCityInspectionsConverter extends AbstractConverter
 {
-    public const TYPE = 'tc-inspections';
-    public const NAME = 'TeamCity - Inspections';
+    public const string TYPE = 'tc-inspections';
+    public const string NAME = 'TeamCity - Inspections';
 
     private TeamCity $tcLogger;
     private string   $globalPrefix = '';

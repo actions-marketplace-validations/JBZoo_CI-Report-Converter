@@ -18,7 +18,7 @@ namespace JBZoo\CIReportConverter\Formats\TeamCity;
 
 final class Helper
 {
-    public const PREDEFINED_METRICS = [
+    public const array PREDEFINED_METRICS = [
         'ArtifactsSize',
         'VisibleArtifactsSize',
         'buildStageDuration:artifactsPublishing',
@@ -55,7 +55,7 @@ final class Helper
         'SuccessRate',
         'TimeSpentInQueue',
     ];
-    private const TIMESTAMP_FORMAT = 'Y-m-d\TH:i:s.uO';
+    private const string TIMESTAMP_FORMAT = 'Y-m-d\TH:i:s.uO';
 
     public static function printEvent(string $eventName, array $params = []): string
     {

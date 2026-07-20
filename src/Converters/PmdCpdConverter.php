@@ -26,8 +26,8 @@ use function JBZoo\Data\data;
 
 final class PmdCpdConverter extends AbstractConverter
 {
-    public const TYPE = 'pmd-cpd';
-    public const NAME = 'PmdCpd.xml';
+    public const string TYPE = 'pmd-cpd';
+    public const string NAME = 'PmdCpd.xml';
 
     public function toInternal(string $source): SourceSuite
     {

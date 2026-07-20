@@ -24,8 +24,8 @@ use JBZoo\CIReportConverter\Formats\Source\SourceSuite;
 
 final class PlainTextConverter extends AbstractConverter
 {
-    public const TYPE = 'plain';
-    public const NAME = 'Plain Text';
+    public const string TYPE = 'plain';
+    public const string NAME = 'Plain Text';
 
     public function fromInternal(SourceSuite $sourceSuite): string
     {

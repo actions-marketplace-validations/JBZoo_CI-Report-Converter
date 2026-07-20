@@ -24,8 +24,8 @@ use JBZoo\CIReportConverter\Formats\Source\SourceSuite;
 
 final class GithubCliConverter extends AbstractConverter
 {
-    public const TYPE = 'github-cli';
-    public const NAME = 'GitHub Actions - CLI';
+    public const string TYPE = 'github-cli';
+    public const string NAME = 'GitHub Actions - CLI';
 
     public function fromInternal(SourceSuite $sourceSuite): string
     {

@@ -21,10 +21,10 @@ use JBZoo\CIReportConverter\Formats\Source\SourceSuite;
 abstract class AbstractConverter
 {
     /** @var string */
-    public const TYPE = 'abstract';
+    public const string TYPE = 'abstract';
 
     /** @var string */
-    public const NAME = 'Abstract';
+    public const string NAME = 'Abstract';
 
     protected ?string $rootPath      = null;
     protected ?string $rootSuiteName = null;

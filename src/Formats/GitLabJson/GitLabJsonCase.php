@@ -20,14 +20,14 @@ use JBZoo\CIReportConverter\Formats\AbstractNode;
 
 final class GitLabJsonCase extends AbstractNode
 {
-    public const SEVERITY_INFO     = 'info';
-    public const SEVERITY_MINOR    = 'minor';
-    public const SEVERITY_MAJOR    = 'major';
-    public const SEVERITY_CRITICAL = 'critical';
-    public const SEVERITY_BLOCKER  = 'blocker';
+    public const string SEVERITY_INFO     = 'info';
+    public const string SEVERITY_MINOR    = 'minor';
+    public const string SEVERITY_MAJOR    = 'major';
+    public const string SEVERITY_CRITICAL = 'critical';
+    public const string SEVERITY_BLOCKER  = 'blocker';
 
-    public const DEFAULT_LEVEL       = self::SEVERITY_MAJOR;
-    public const DEFAULT_DESCRIPTION = 'Undefined error message';
+    public const string DEFAULT_LEVEL       = self::SEVERITY_MAJOR;
+    public const string DEFAULT_DESCRIPTION = 'Undefined error message';
 
     public string $description;
     public string $severity; // See self::SEVERITY_*

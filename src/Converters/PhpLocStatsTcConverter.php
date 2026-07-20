@@ -23,8 +23,8 @@ use function JBZoo\Data\json;
 
 final class PhpLocStatsTcConverter extends AbstractStatsTcConverter
 {
-    public const TYPE = 'phploc-json';
-    public const NAME = 'PHPloc (json)';
+    public const string TYPE = 'phploc-json';
+    public const string NAME = 'PHPloc (json)';
 
     public function toInternalMetric(string $sourceCode): Metrics
     {

@@ -21,8 +21,8 @@ use JBZoo\CIReportConverter\Formats\MetricMaps\JUnit;
 
 final class JUnitStatsTcConverter extends AbstractStatsTcConverter
 {
-    public const TYPE = 'junit-xml';
-    public const NAME = 'JUnit.xml';
+    public const string TYPE = 'junit-xml';
+    public const string NAME = 'JUnit.xml';
 
     public function toInternalMetric(string $sourceCode): Metrics
     {
