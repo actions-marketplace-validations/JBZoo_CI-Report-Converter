@@ -62,7 +62,7 @@ Well... It may seem to you it's a useless thing, and _your favorite super tool_ 
 
 ## Requirements
 
-- PHP 8.2 or higher
+- PHP 8.3 or higher
 - Extensions: dom, simplexml, hash
 
 ## Installing

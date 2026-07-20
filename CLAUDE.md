@@ -70,7 +70,7 @@ CI-Report-Converter is a PHP library that converts error reports between differe
 
 ## Dependencies
 
-- PHP 8.2+ required
+- PHP 8.3+ required
 - Symfony Console for CLI interface
 - JBZoo packages (cli, data, utils, markdown)
 - Development dependencies include jbzoo/toolbox-dev for code quality tools
